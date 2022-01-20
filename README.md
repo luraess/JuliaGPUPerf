@@ -2,14 +2,29 @@
 
 Performance benchs for Julia GPU
 
-## Benchmarks
+## Benchmarks Nvidia A100 SXM4 40 GB
 Effetive memory throughput `T_tot` measured in GB/s for:
-1. the triad 2D kernel `A[ix,iy] = B[ix,iy] + s*C[ix,iy]`
-2. the triad 2D kernel `A[ix,iy] = B[ix,iy] + s*C[ix,iy]^pow_int`
-3. the triad 2D kernel `A[ix,iy] = B[ix,iy] + s*C[ix,iy]^pow_float`
-4. the diffusion 2D kernel `T2[ix,iy] = T[ix,iy] + dt*(Ci[ix,iy]*(
-                              - ((-lam*(T[ix+1,iy] - T[ix,iy])*_dx) - (-lam*(T[ix,iy] - T[ix-1,iy])*_dx))*_dx
-                              - ((-lam*(T[ix,iy+1] - T[ix,iy])*_dy) - (-lam*(T[ix,iy] - T[ix,iy-1])*_dy))*_dy ))`
+1. the triad 2D kernel
+```julia
+A[ix,iy] = B[ix,iy] + s*C[ix,iy]
+```
+
+2. the triad 2D kernel with power (`Int`)
+```julia
+A[ix,iy] = B[ix,iy] + s*C[ix,iy]^pow_int
+```
+
+3. the triad 2D kernel with power (`Float`)
+```julia
+A[ix,iy] = B[ix,iy] + s*C[ix,iy]^pow_float
+```
+
+4. the diffusion 2D kernel
+```julia
+T2[ix,iy] = T[ix,iy] + dt*(Ci[ix,iy]*(
+            - ((-lam*(T[ix+1,iy] - T[ix,iy])*_dx) - (-lam*(T[ix,iy] - T[ix-1,iy])*_dx))*_dx
+            - ((-lam*(T[ix,iy+1] - T[ix,iy])*_dy) - (-lam*(T[ix,iy] - T[ix,iy-1])*_dy))*_dy ))
+```
 
 Reported for single precision `Float32`:
 ```julia-repl
