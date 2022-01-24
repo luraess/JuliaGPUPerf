@@ -4,8 +4,10 @@ DAT = Float64
 
 if DAT==Float64
     DAT_Int = Int64
+    sc = 1
 elseif DAT==Float32
     DAT_Int = Int32
+    sc = 2
 end
 
 @inbounds function memcopy_triad!(A, B, C, s)
@@ -42,7 +44,7 @@ end
 
 function run_bench()
     fact      = 32
-    nx, ny    = fact*1024, fact*1024
+    nx, ny    = sc*fact*1024, fact*1024
     threads   = (32, 8)
     blocks    = (nx÷threads[1], ny÷threads[2])
     nx, ny    = threads[1]*blocks[1], threads[2]*blocks[2]
