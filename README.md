@@ -57,8 +57,7 @@ T_tot diffusion 2D      = 1362.546 GB/s
 
 **Single precision execution performs at ~95-96% of double precision, with exception for the `Float` power performing at ~86%.**
 
-- Hardware
-Running on an Nvidia A100 SXM4:
+- Hardware: running on an Nvidia A100 SXM4:
 ```julia-repl
 julia> CUDA.versioninfo()
 CUDA toolkit 11.4, local installation
@@ -98,8 +97,7 @@ T_tot diffusion 2D      = 736.5969 GB/s
 
 **Single precision execution performs at XX% of double precision, with exception for the `Float` power performing at XX%.**
 
-- Hardware
-Running on an Nvidia V100 SXM2:
+- Hardware: running on an Nvidia V100 SXM2:
 ```julia-repl
 julia> CUDA.versioninfo()
 CUDA toolkit 11.4, local installation
@@ -138,8 +136,7 @@ T_tot diffusion 2D      = 163.9904 GB/s
 
 **Single precision execution performs at XX% of double precision, with exception for the `Float` power performing at XX%.**
 
-- Hardware
-Running on an Nvidia A100 SXM4:
+- Hardware: running on an Nvidia Titan Xm:
 ```julia-repl
 CUDA toolkit 11.4, local installation
 NVIDIA driver 470.42.1, for CUDA 11.4
