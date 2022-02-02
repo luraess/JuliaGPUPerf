@@ -1,6 +1,6 @@
 # Julia GPU Perf
 
-Performance benchs for Julia GPU on the CUDA and AMDGPU stack.
+Performance benchs for Julia GPU using the [CUDA.jl](https://github.com/JuliaGPU/CUDA.jl) and [AMDGPU.jl](https://github.com/JuliaGPU/AMDGPU.jl) software stack.
 
 ## Benchmarks
 Effetive memory throughput `T_tot` measured in GB/s for:
@@ -29,9 +29,10 @@ T2[ix,iy] = T[ix,iy] + dt*(Ci[ix,iy]*(
 ## Packages
 ```julia-repl
 (JuliaGPUPerf) pkg> st
-      Status `~/scratch/JuliaGPUPerf/Project.toml`
+      Status
+  [21141c5a] AMDGPU v0.2.17 `https://github.com/JuliaGPU/AMDGPU.jl.git#jps/julia-1.7`
   [6e4b80f9] BenchmarkTools v1.2.2
-  [052768ef] CUDA v3.7.0
+  [052768ef] CUDA v3.8.0
 ```
 
 ## Tests
