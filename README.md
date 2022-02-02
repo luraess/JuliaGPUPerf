@@ -1,6 +1,6 @@
 # Julia GPU Perf
 
-Performance benchs for Julia GPU
+Performance benchs for Julia GPU on the CUDA and AMDGPU stack.
 
 ## Benchmarks
 Effetive memory throughput `T_tot` measured in GB/s for:
