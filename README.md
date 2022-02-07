@@ -40,9 +40,9 @@ T2[ix,iy] = T[ix,iy] + dt*(Ci[ix,iy]*(
 Hardware:
 * [Nvidia A100 SXM4 40GB](#nvidia-a100-sxm4-40gb)
 * [Nvidia V100 SXM2 32GB](#nvidia-v100-sxm2-32gb)
-* [Nvidia Titan Xm PCIe3.0 12GB](nvidia-titan-xm-pciee3.0-12gb)
-* [AMD Vega 20 gfx906 - Ault](amd-vega-20-gfx906-ault)
-* [AMD Vega 20 gfx906 - Satori](amd-vega-20-gfx906-satori)
+* [Nvidia Titan Xm PCIe3.0 12GB](#nvidia-titan-xm-pciee3.0-12gb)
+* [AMD Vega 20 gfx906 - Ault](#amd-vega-20-gfx906---ault)
+* [AMD Vega 20 gfx906 - Satori](#amd-vega-20-gfx906---satori)
 
 Running the codes as `julia --project -O3 --check-bounds=no [amd/cuda]_bench.jl`
 
@@ -164,7 +164,7 @@ Environment:
   0: NVIDIA GeForce GTX TITAN X (sm_52, 5.819 GiB / 11.927 GiB available)
 ```
 
-### AMD Vega 20 gfx906 Ault
+### AMD Vega 20 gfx906 - Ault
 Reported for single precision `Float32`:
 ```julia-repl
 nx, ny, DAT = 49152, 24576, Float32
@@ -208,7 +208,7 @@ HSA Agents (2):
 - GPU: Vega 20 WKS GL-XE [Radeon Pro VII] (gfx906)
 ```
 
-### AMD Vega 20 gfx906 Satori
+### AMD Vega 20 gfx906 - Satori
 Reported for single precision `Float32`:
 ```julia-repl
 nx, ny, DAT = 49152, 24576, Float32
