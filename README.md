@@ -41,8 +41,8 @@ Hardware:
 * [Nvidia A100 SXM4 40GB](#nvidia-a100-sxm4-40gb)
 * [Nvidia V100 SXM2 32GB](#nvidia-v100-sxm2-32gb)
 * [Nvidia Titan Xm PCIe3.0 12GB](nvidia-titan-xm-pciee3.0-12gb)
-* [AMD Vega 20 gfx906](amd-vega-20-gfx906-ault)
-* [AMD Vega 20 gfx906](amd-vega-20-gfx906-satori)
+* [AMD Vega 20 gfx906 - Ault](amd-vega-20-gfx906---ault)
+* [AMD Vega 20 gfx906 - Satori](amd-vega-20-gfx906---satori)
 
 Running the codes as `julia --project -O3 --check-bounds=no [amd/cuda]_bench.jl`
 
