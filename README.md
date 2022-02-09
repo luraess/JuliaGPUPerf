@@ -87,7 +87,7 @@ Environment:
 ```
 
 
-### Nvidia V100 SXM2 32 GB
+### Nvidia V100 SXM2 32GB
 Reported for single precision `Float32`:
 ```julia-repl
 nx, ny, DAT = 65536, 32768, Float32
