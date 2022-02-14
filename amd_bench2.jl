@@ -10,9 +10,6 @@ elseif DAT==Float32
     DAT_Int = Int32
 end
 
-
-DAT_Int64 = Int64
-
 @inbounds function memcopy_triad_pow_int!(A, B, C, s, pow_int, ni)
     ix = (workgroupIdx().x - 1) * workgroupDim().x + workitemIdx().x
     iy = (workgroupIdx().y - 1) * workgroupDim().y + workitemIdx().y
