@@ -113,11 +113,12 @@ int main(){
     DAT _dy  = 1.0;
     DAT  dt  = 1.0/10.0/4.1;
     // tests
-    for(it=0; it<nt; it++){ 
-        if (it==10){ tic(); }
-        memcopy<<<grid, block>>>(A_d, nx, ny); cudaDeviceSynchronize();
-    }
-    tim("Performance memcpy", mem*(nt-10)*2/1024./1024./1024.);
+    
+    // for(it=0; it<nt; it++){ 
+    //     if (it==10){ tic(); }
+    //     memcopy<<<grid, block>>>(A_d, nx, ny); cudaDeviceSynchronize();
+    // }
+    // tim("Performance memcpy", mem*(nt-10)*2/1024./1024./1024.);
 
     for(it=0; it<nt; it++){ 
         if (it==10){ tic(); }
