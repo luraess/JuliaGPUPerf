@@ -91,7 +91,6 @@ Using the [cuda_c_bench.cu](cuda_c_bench.cu) script. Results reported for single
 ```julia-repl
 65536x32768, 8.000 GB, 100 iterations.
 launching (2048x4096) grid of (32x8) blocks.
-Performance memcpy:            1.210 seconds, 1189.707 GB/s
 Performance triad2D:           1.754 seconds, 1231.145 GB/s
 Performance triad2D_pow_int:   1.978 seconds, 1091.983 GB/s (using fpow)
 Performance triad2D_pow_float: 1.974 seconds, 1094.501 GB/s (using fpow)
@@ -102,7 +101,6 @@ And for double precision `Float64`:
 ```julia-repl
 32768x32768, 8.000 GB, 100 iterations.
 launching (1024x4096) grid of (32x8) blocks.
-Performance memcpy:            1.136 seconds, 1268.075 GB/s
 Performance triad2D:           1.691 seconds, 1277.339 GB/s
 Performance triad2D_pow_int:   2.027 seconds, 1065.666 GB/s (using pow)
 Performance triad2D_pow_float: 2.058 seconds, 1049.685 GB/s (using pow)
