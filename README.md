@@ -273,7 +273,7 @@ HSA Agents (2):
 ```
 
 ### AMD Vega 20 gfx906 - Goethe-hlr 
-Results reported for node gpu36-002 (8 GPU devices) and for double precision 'Float64'
+Results reported for node gpu36-002 (8 GPU devices) and for double precision `Float64`
 ```
 Device: 1
 nx, ny, DAT = 24576, 24576, Float64
