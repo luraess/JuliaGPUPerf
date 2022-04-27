@@ -272,7 +272,7 @@ HSA Agents (2):
 - CPU: AMD EPYC 7642 48-Core Processor
 ```
 
-### AMD Vega 20 gfx906 - Goethe-hlr 
+### AMD Vega 20 gfx906 - Goethe-HLR
 Results reported for node gpu36-002 (8 GPU devices) and for double precision `Float64`
 ```
 Device: 1
@@ -324,6 +324,7 @@ T_tot triad2D pow_int   = 687.7494 GB/s
 T_tot triad2D pow_float = 272.0593 GB/s
 T_tot diffusion 2D      = 626.1292 GB/s
 ```
+
 Details:
 ```julia-repl
 julia> AMDGPU.versioninfo()
