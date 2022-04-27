@@ -271,3 +271,95 @@ HSA Agents (2):
 - GPU: Vega 20 (gfx906)
 - CPU: AMD EPYC 7642 48-Core Processor
 ```
+
+### AMD Vega 20 gfx906 - Goethe-HLR
+Results reported for node gpu36-002 (8 GPU devices) and for double precision `Float64`
+```
+Device: 1
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 704.6837 GB/s
+T_tot triad2D pow_int   = 702.3983 GB/s
+T_tot triad2D pow_float = 276.64 GB/s
+T_tot diffusion 2D      = 639.9492 GB/s
+Device: 2
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 708.6794 GB/s
+T_tot triad2D pow_int   = 703.3594 GB/s
+T_tot triad2D pow_float = 276.4491 GB/s
+T_tot diffusion 2D      = 637.9515 GB/s
+Device: 3
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 698.3451 GB/s
+T_tot triad2D pow_int   = 689.2274 GB/s
+T_tot triad2D pow_float = 275.7074 GB/s
+T_tot diffusion 2D      = 628.2715 GB/s
+Device: 4
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 694.4658 GB/s
+T_tot triad2D pow_int   = 685.5483 GB/s
+T_tot triad2D pow_float = 271.552 GB/s
+T_tot diffusion 2D      = 627.0023 GB/s
+Device: 5
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 708.423 GB/s
+T_tot triad2D pow_int   = 696.6548 GB/s
+T_tot triad2D pow_float = 273.7445 GB/s
+T_tot diffusion 2D      = 636.6477 GB/s
+Device: 6
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 687.6798 GB/s
+T_tot triad2D pow_int   = 681.9737 GB/s
+T_tot triad2D pow_float = 273.1908 GB/s
+T_tot diffusion 2D      = 622.9047 GB/s
+Device: 7
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 692.7241 GB/s
+T_tot triad2D pow_int   = 682.6617 GB/s
+T_tot triad2D pow_float = 274.2336 GB/s
+T_tot diffusion 2D      = 622.4565 GB/s
+Device: 8
+nx, ny, DAT = 24576, 24576, Float64
+T_tot triad2D           = 695.2322 GB/s
+T_tot triad2D pow_int   = 687.7494 GB/s
+T_tot triad2D pow_float = 272.0593 GB/s
+T_tot diffusion 2D      = 626.1292 GB/s
+```
+
+Details:
+```julia-repl
+julia> AMDGPU.versioninfo()
+HSA Runtime (ready)
+- Path: /opt/rocm/hsa/lib/libhsa-runtime64.so
+- Version: 1.1.0
+ld.lld (ready)
+- Path: /opt/rocm/llvm/bin/ld.lld
+ROCm-Device-Libs (ready)
+- Path: /opt/rocm/amdgcn/bitcode
+- Downloaded: true
+HIP Runtime (ready)
+- Path: /opt/rocm/lib/libamdhip64.so
+rocBLAS (ready)
+- Path: /opt/rocm/lib/librocblas.so
+rocSOLVER (ready)
+- Path: /opt/rocm/lib/librocsolver.so
+rocALUTION (MISSING)
+rocSPARSE (ready)
+- Path: /opt/rocm/lib/librocsparse.so
+rocRAND (ready)
+- Path: /opt/rocm/lib/librocrand.so
+rocFFT (ready)
+- Path: /opt/rocm/lib/librocfft.so
+MIOpen (ready)
+- Path: /opt/rocm/lib/libMIOpen.so
+HSA Agents (10):
+- GPU-938470a172da5ee3 [Vega 20 (gfx906)]
+- GPU-2d1060a172da5f17 [Vega 20 (gfx906)]
+- GPU-d918788172da5f19 [Vega 20 (gfx906)]
+- GPU-eaae68e172da5eb6 [Vega 20 (gfx906)]
+- CPU-XX [AMD EPYC 7452 32-Core Processor]
+- CPU-XX [AMD EPYC 7452 32-Core Processor]
+- GPU-b28a58c172da5ee1 [Vega 20 (gfx906)]
+- GPU-218c606172fd62db [Vega 20 (gfx906)]
+- GPU-2182408172fd62db [Vega 20 (gfx906)]
+- GPU-a5ac38e172dc768b [Vega 20 (gfx906)]
+```
